@@ -1,94 +1,57 @@
-# **Magic Portfolio by Once UI**
+# **Optigrade — Academic Intelligence Engine**
 
-View the [demo here](https://demo.magic-portfolio.com).
+> Designed by **Oluwalowo John**  
+> Founder of Zoe Tech Hub | Creator of Optigrade, TaxBox & NoteHub  
+> Empowering smarter learning experiences across education & health
 
-![Magic Portfolio](https://demo.magic-portfolio.com/images/og/home.jpg)
+![Optigrade Demo](https://www.zoetechhub.name.ng/public/images/og/home.jpg)
 
+---
 
-# **Getting started**
+## 🚀 Live Preview
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+🌐 Visit my [Portfolio to view case study](https://www.zoetechhub.name.ng)
 
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
+---
 
-**2. Install dependencies**
-```
-npm install
-```
+## 🧠 What is Optigrade?
 
-**3. Run dev server**
-```
-npm run dev
-```
+Optigrade is a smart academic companion designed to help students thrive through **predictive forecasting**, **personalized guidance**, and **intelligent feedback**.
 
-**4. Edit config**
-```
-src/app/resources/config
-```
+It enhances study efficiency by analyzing each learner’s academic history, habits, and learning style — and generates custom CGPA projections, semester insights, and strategic performance goals.
 
-**5. Edit content**
-```
-src/app/resources/content
-```
+Optigrade is a predictive academic performance engine built to help students succeed with precision. It analyzes historical learning data, study patterns, and course loads to forecast GPA/CGPA outcomes and offer personalized insights. Through AI and machine learning, Optigrade transforms raw academic data into actionable feedback — supporting smarter study plans, real-time performance tracking, and strategic semester planning.
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
+## ✨ Features
 
-# **Documentation**
+- 🎓 **GPA/CGPA Prediction Engine**  
+  Forecast academic outcomes based on personal learning history and study patterns.
 
-Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
+- 📈 **Performance Dashboard**  
+  Visualize progress, track grades, and receive intelligent recommendations.
 
-# **Features**
+- 🧠 **AI + ML Integration**  
+  Learns user behavior and course dynamics to increase prediction accuracy over time.
 
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
+- 📚 **Study Guidance**  
+  Generates structured plans tailored to workload, hours studied, and academic goals.
 
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+- 🔒 **Modular Tools Architecture**  
+  Custom GPA calculators, certification cards, CV preview, and semester analyzers.
 
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+---
 
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+## 🔄 Workflow Architecture
 
-## **Localization**
-- A localized version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
-
-# **Authors**
-
-Connect with us on Threads or LinkedIn.
-
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-
-Localization added by [François Hernandez](https://github.com/francoishernandez)
-
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-- You can extend the license to commercial use by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+```plaintext
+User Input (Grades, Courses, Study Goals)
+  ⇓
+Structured Data Mapping (Unit Load, Time Spent, Grade Weights)
+  ⇓
+Learning Pattern Profiling (Study Style, History)
+  ⇓
+AI/ML Model Inference (Personalized Prediction)
+  ⇓
+Forecast Engine (GPA/CGPA + Feedback)
+  ⇓
+Performance Dashboard + Recommendations
