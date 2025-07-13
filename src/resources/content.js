@@ -127,7 +127,7 @@ const about = {
         ],
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -154,7 +154,7 @@ const about = {
         ],
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Vercel website",
             width: 16,
             height: 9,
@@ -191,13 +191,13 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Figma UI Design",
             width: 16,
             height: 9,
           },
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Figma components",
             width: 16,
             height: 9,
@@ -215,7 +215,7 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Adobe XD UI Mockup",
             width: 16,
             height: 9,
@@ -232,7 +232,7 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Notion workspace",
             width: 16,
             height: 9,
@@ -249,7 +249,7 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Jupyter visualization",
             width: 16,
             height: 9,
