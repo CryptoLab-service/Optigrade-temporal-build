@@ -53,7 +53,7 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building thoughtful products & solutions where design, intelligence, and impact ignite</>,
+  headline: <>Where design, intelligence, and impact ignite</>,
   featured: {
     display: true,
     title: <>My Ongoing Project: <strong className="ml-4">OPTIGRADE</strong></>,
