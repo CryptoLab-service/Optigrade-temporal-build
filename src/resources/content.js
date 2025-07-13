@@ -1,46 +1,44 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Tolulope",
+  lastName: "John",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Designer | Analyst | Creative technologist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "oluwalowojohn@gmail.com",
+  location: "Africa/Lagos", // Updated to IANA time zone identifier
+  languages: ["English", "Yoruba", "Hausa"],
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to get updates on design and technology trends</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about design, technology, and the intersection of creativity, UX, and
+      engineering.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/cryptoLab-service",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/oluwalowojohn/",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Twitter",
+    icon: "twitter",
+    link: "https://www.x.com/EncryptedMFI",
   },
   {
     name: "Email",
@@ -55,16 +53,18 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building thoughtful products & solutions where design, intelligence, and impact ignite</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>My Ongoing Project: <strong className="ml-4">OPTIGRADE</strong></>,
+    href: "/work/optigrade-academic-intelligence",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Toluwalope John — designer, creative technologist, and founder of Zoe Tech Hub. I prototype
+      ideas into purposeful digital tools across education and health, like Optigrade for academic
+      analytics, TasxBox for simplified daily task workflows, and NoteHub for collaborative
+      documentation. I believe in intuitive design and agile engineering for real-world change.
     </>
   ),
 };
@@ -83,41 +83,51 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://zcal.co/oluwalowojohn",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Toluwalope John is a UI/UX and graphics designer, entry-level data scientist, and budding
+        software developer and AI agent. With a passion for creating purposeful visuals and seamless
+        user experiences, he bridges design and technology to craft solutions that feel intuitive and
+        impactful. He's currently channeling that energy into Optigrade—a platform he's developing to
+        rethink and enhance academic performance in Nigerian higher institutions.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Zoe Tech Hub",
+        timeframe: "2017 - Present",
+        role: "Founder",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Redesigned UI/UX and graphics for key platforms under Zoe Tech Hub—my design and
+            innovation hub—resulting in a 35%+ boost in user engagement and approximately 40% faster
+            load times.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Led multiple graphics design projects, digital literacy campaigns, and office productivity
+            initiatives, enhancing client impact and improving overall user experience.
+          </>,
+          <>
+            Conducted extensive user research and usability analysis to guide UI/UX and product design
+            decisions.
+          </>,
+          <>
+            Integrated AI-powered tools into the design workflow, enabling faster iteration cycles
+            and more data-driven, user-centered solutions.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/tools/tools1.jpg",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -125,72 +135,170 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "CM Project House",
+        timeframe: "2024 - 2025",
+        role: "Research Analyst and Designer",
         achievements: [
           <>
             Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            design consistency by 25%.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Collaborated with cross-functional teams to launch a new academic product line,
+            contributing to a 15% increase in company revenue and improved student engagement.
+          </>,
+          <>
+            Produced visually compelling digital and print publications for Zoe Tech Hub, combining
+            effective layout design with strategic branding to elevate creative impact.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/tools/tools1.jpg",
+            alt: "Vercel website",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Ekiti State University, Ado-Ekiti",
+        description: <>Studied Physics.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "The 3 Million Technical Talent",
+        description: <>Studied User Interface and User Experience Design.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
+        description: (
+          <>
+            Crafting modern user interfaces with Figma—using its design systems and prototyping
+            features to build scalable, collaborative experiences.
+          </>
+        ),
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
+            src: "/tools/tools1.jpg",
+            alt: "Figma UI Design",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/tools/tools1.jpg",
+            alt: "Figma components",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Adobe XD",
+        description: (
+          <>
+            Designing seamless user interfaces with Adobe XD—leveraging its prototyping and
+            collaboration tools to create intuitive, high-fidelity mockups that enhance user
+            experiences.
+          </>
+        ),
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/tools/tools1.jpg",
+            alt: "Adobe XD UI Mockup",
             width: 16,
             height: 9,
           },
         ],
+      },
+      {
+        title: "Notion",
+        description: (
+          <>
+            Organizing ideas and teams with Notion—creating structured knowledge bases and design
+            systems that support agile collaboration.
+          </>
+        ),
+        images: [
+          {
+            src: "/tools/tools1.jpg",
+            alt: "Notion workspace",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Jupyter Notebook",
+        description: (
+          <>
+            Exploring data and building prototypes with Python-powered notebooks—visualizing insights
+            to support design and development decisions.
+          </>
+        ),
+        images: [
+          {
+            src: "/tools/tools1.jpg",
+            alt: "Jupyter visualization",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+    ],
+  },
+  certification: {
+    display: true,
+    title: "Certification",
+    awards: [
+      {
+        name: "3MTT Nigeria",
+        description: (
+          <>
+            Certified in User Interface and User Experience Design as part of the Federal Training
+            Initiative.
+          </>
+        ),
+      },
+      {
+        name: "ALX Africa",
+        description: (
+          <>
+            Completed Artificial Intelligence Career Essentials, Professional Foundation and currently
+            undergoing Frontend Engineering Training under The Room Fellowship.
+          </>
+        ),
+      },
+      {
+        name: "Access Bank Youthrive Internship (CareerEx)",
+        description: <>Certified in Product Management with career acceleration support.</>,
+      },
+      {
+        name: "Cisco Networking Academy",
+        description: (
+          <>Completed Introduction to English for IT (1 and 2), Cybersecurity and Networking Basics.</>
+        ),
+      },
+      {
+        name: "LinkedIn Learning",
+        description: (
+          <>Completed courses on Design Thinking, Figma Essentials, and Creative Productivity.</>
+        ),
+      },
+      {
+        name: "GreatLearning Academy",
+        description: <>Certified in Design Thinking principles, UI/UX Design, and Introduction to Design.</>,
       },
     ],
   },
@@ -201,8 +309,6 @@ const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work = {
@@ -210,8 +316,6 @@ const work = {
   label: "Work",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
@@ -219,8 +323,6 @@ const gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
