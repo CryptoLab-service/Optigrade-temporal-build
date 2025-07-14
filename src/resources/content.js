@@ -191,13 +191,13 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/home.jpg",
+            src: "/tools/figma.jpg",
             alt: "Figma UI Design",
             width: 16,
             height: 9,
           },
           {
-            src: "/tools/home.jpg",
+            src: "/tools/figma.jpg",
             alt: "Figma components",
             width: 16,
             height: 9,
@@ -215,7 +215,7 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/home.jpg",
+            src: "/tools/xd.jpg",
             alt: "Adobe XD UI Mockup",
             width: 16,
             height: 9,
@@ -232,7 +232,7 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/home.jpg",
+            src: "/tools/notion.jpg",
             alt: "Notion workspace",
             width: 16,
             height: 9,
@@ -249,7 +249,7 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/home.jpg",
+            src: "/tools/jupyter.jpg",
             alt: "Jupyter visualization",
             width: 16,
             height: 9,
