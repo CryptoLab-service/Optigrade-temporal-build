@@ -158,6 +158,7 @@ export default async function RootLayout({
             <Footer/>
           </Column>
         </Providers>
-      </Flex>
+        <SpeedInsights /> {/* This is the added line */}
+    </Flex>
   );
 }
