@@ -2,9 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
 import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
-
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
@@ -40,7 +38,7 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
   return <>{currentTime}</>;
 };
 
-export default TimeDisplay;
+export default TimeDisplay; // Default export for TimeDisplay
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
@@ -63,13 +61,29 @@ export const Header = () => {
         <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
           {display.location && <Flex hide="s">{person.location}</Flex>}
         </Flex>
+
+        {/* Glassmorphic Navbar */}
         <Flex fillWidth horizontal="center">
           <Flex
-            background="page"
-            border="neutral-alpha-weak"
-            radius="m-4"
-            shadow="l"
-            padding="4"
+            style={{
+              background: "rgba(255, 255, 255, 0.08)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              borderRadius: "20px",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              boxShadow: "0 10px 24px rgba(0, 0, 0, 0.2)",
+              padding: "16px 32px",
+              height: "60px",
+              width: "auto",
+              maxWidth: "100%",
+              minWidth: "fit-content",
+              margin: "0 auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: "12px",
+            }}
             horizontal="center"
             zIndex={1}
           >
@@ -155,6 +169,7 @@ export const Header = () => {
             </Flex>
           </Flex>
         </Flex>
+
         <Flex fillWidth horizontal="end" vertical="center">
           <Flex
             paddingRight="12"
