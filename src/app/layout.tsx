@@ -2,8 +2,6 @@ import '@once-ui-system/core/css/styles.css';
 import '@once-ui-system/core/css/tokens.css';
 import '@/resources/custom.css'
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
 import classNames from "classnames";
 
 import { Background, Column, Flex, Meta, opacity, SpacingToken } from "@once-ui-system/core";
@@ -158,7 +156,6 @@ export default async function RootLayout({
             <Footer/>
           </Column>
         </Providers>
-        <SpeedInsights /> {/* This is the added line */}
     </Flex>
   );
 }
