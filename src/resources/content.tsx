@@ -232,7 +232,7 @@ const about = {
         title: "Photoshop",
         description: (
           <>
-            Creating and refining visual assets with Adobe Photoshop, 
+            Creating and refining visual assets with Adobe Photoshop,
             editing imagery, and building flexible editings that power agile creative workflows.
           </>
         ),
@@ -328,13 +328,11 @@ const about = {
       {
         src: "/tools/training.jpg",
         alt: "Community Training Sessions",
-            width: 12,
-            height: 6.75,
-          },
-        ],
+        width: 12,
+        height: 6.75,
       },
     ],
-  },
+  }, // Corrected: Removed extra ']' here
   certification: {
     display: true,
     title: "Certification",
@@ -343,7 +341,7 @@ const about = {
         name: "3MTT Nigeria:",
         description: (
           <>
-             Certified in User Interface and User Experience Design as part of the Federal Training
+            Certified in User Interface and User Experience Design as part of the Federal Training
             Initiative.
           </>
         ),
