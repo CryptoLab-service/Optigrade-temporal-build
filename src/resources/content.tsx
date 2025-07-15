@@ -284,18 +284,52 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/note.jpg",
+            src: "/tools/jupy.jpg",
             alt: "Figma UI Design",
             width: 12,
             height: 6.75,
           },
           {
-            src: "/tools/note1.jpg",
+            src: "/tools/jupy1.jpg",
             alt: "XD components",
             width: 12,
             height: 6.75,
           },
         ],
+      },
+    ],
+  },
+  research: {
+    display: true,
+    title: "Academic Research",
+    description: (
+      <>
+        Exploring physics, educational analytics, and applied technology—conducting research that bridges data science with creative design. Projects include CGPA forecasting, learner engagement, and intelligent academic support systems like Optigrade.
+      </>
+    ),
+    images: [
+      {
+        src: "/tools/research.jpg",
+        alt: "Academic Research Projects",
+        width: 12,
+        height: 6.75,
+      },
+    ],
+  },
+  impact: {
+    display: true,
+    title: "Community Impact",
+    description: (
+      <>
+        Facilitating digital literacy and computer training across schools and youth hubs—empowering learners with hands-on experience in design tools, productivity software, and creative technology. Focused on grassroots growth and tech equity.
+      </>
+    ),
+    images: [
+      {
+        src: "/tools/training.jpg",
+        alt: "Community Training Sessions",
+        width: 12,
+        height: 6.75,
       },
     ],
   },
