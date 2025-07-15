@@ -60,7 +60,7 @@ const home = {
     href: "/work/optigrade-academic-intelligence",
   },
   subline: (
-    <p style={{ fontSize: '1rem', color: '#4B5563' }}>
+    <p style={{ fontSize: '1.125rem' }}>
       I'm Toluwalope John — designer, creative technologist, and founder of Zoe Tech Hub. I prototype
       ideas into purposeful digital tools across education and health, like Optigrade for academic
       analytics, TasxBox for simplified daily task workflows, and NoteHub for collaborative
@@ -127,7 +127,7 @@ const about = {
         ],
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -154,7 +154,7 @@ const about = {
         ],
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/home.jpg",
             alt: "Vercel website",
             width: 16,
             height: 9,
@@ -191,14 +191,14 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
+            src: "/tools/figma.jpg",
             alt: "Figma UI Design",
             width: 16,
             height: 9,
           },
           {
-            src: "/tools/tools1.jpg",
-            alt: "Figma components",
+            src: "/tools/figma1.jpg",
+            alt: "XD components",
             width: 16,
             height: 9,
           },
@@ -215,8 +215,37 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
-            alt: "Adobe XD UI Mockup",
+            src: "/tools/xd.jpg",
+            alt: "Figma UI Design",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/tools/xd1.jpg",
+            alt: "XD components",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Photoshop",
+        description: (
+          <>
+            Creating and refining visual assets with Adobe Photoshop, 
+            editing imagery, and building flexible editings that power agile creative workflows.
+          </>
+        ),
+        images: [
+          {
+            src: "/tools/ps.jpg",
+            alt: "Figma UI Design",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/tools/ps1.jpg",
+            alt: "XD components",
             width: 16,
             height: 9,
           },
@@ -232,8 +261,14 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
-            alt: "Notion workspace",
+            src: "/tools/notion.jpg",
+            alt: "Figma UI Design",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/tools/notion1.jpg",
+            alt: "XD components",
             width: 16,
             height: 9,
           },
@@ -249,8 +284,14 @@ const about = {
         ),
         images: [
           {
-            src: "/tools/tools1.jpg",
-            alt: "Jupyter visualization",
+            src: "/tools/note.jpg",
+            alt: "Figma UI Design",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/tools/note1.jpg",
+            alt: "XD components",
             width: 16,
             height: 9,
           },
