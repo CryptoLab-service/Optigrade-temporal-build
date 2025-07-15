@@ -41,6 +41,7 @@ export const iconLibrary: Record<string, IconType> = {
   eyeOff: HiOutlineEyeSlash,
   github: FaGithub,
   linkedin: FaLinkedin,
+  whatsapp: FaWhatsapp,
   x: FaX,
   threads: FaThreads,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
