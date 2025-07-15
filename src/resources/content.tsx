@@ -37,7 +37,7 @@ const social = [
   },
   {
     name: "X",
-    icon: "X",
+    icon: "x",
     link: "https://www.x.com/EncryptedMFI",
   },
   {
@@ -328,8 +328,10 @@ const about = {
       {
         src: "/tools/training.jpg",
         alt: "Community Training Sessions",
-        width: 12,
-        height: 6.75,
+            width: 12,
+            height: 6.75,
+          },
+        ],
       },
     ],
   },
@@ -338,10 +340,10 @@ const about = {
     title: "Certification",
     awards: [
       {
-        name: "3MTT Nigeria",
+        name: "3MTT Nigeria:",
         description: (
           <>
-            Certified in User Interface and User Experience Design as part of the Federal Training
+             Certified in User Interface and User Experience Design as part of the Federal Training
             Initiative.
           </>
         ),
