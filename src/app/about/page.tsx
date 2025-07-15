@@ -28,28 +28,43 @@ export async function generateMetadata() {
 }
 
 export default function About() {
-  const structure = [
-    {
-      title: about.intro.title,
-      display: about.intro.display,
-      items: [],
-    },
-    {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
-    },
-    {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
-    },
-    {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
-    },
-  ];
+const structure = [
+  {
+    title: about.intro.title,
+    display: about.intro.display,
+    items: [],
+  },
+  {
+    title: about.work.title,
+    display: about.work.display,
+    items: about.work.experiences.map((experience) => experience.company),
+  },
+  {
+    title: about.studies.title,
+    display: about.studies.display,
+    items: about.studies.institutions.map((institution) => institution.name),
+  },
+  {
+    title: about.technical.title,
+    display: about.technical.display,
+    items: about.technical.skills.map((skill) => skill.title),
+  },
+  {
+    title: about.research.title,
+    display: about.research.display,
+    items: [], // You can add mapped items if needed
+  },
+  {
+    title: about.impact.title,
+    display: about.impact.display,
+    items: [], // You can add mapped items if needed
+  },
+  {
+    title: about.certification.title,
+    display: about.certification.display,
+    items: about.certification.awards.map((award) => award.name),
+  },
+];
   return (
     <Column maxWidth="m">
       <Schema
