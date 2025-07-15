@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { FaWhatsapp } from "react-icons/fa6";
 
 import {
   HiArrowUpRight,
