@@ -299,6 +299,7 @@ const about = {
       },
     ],
   },
+
   research: {
     display: true,
     title: "Academic Research",
@@ -332,7 +333,7 @@ const about = {
         height: 6.75,
       },
     ],
-  }, // Corrected: Removed extra ']' here
+  },
   certification: {
     display: true,
     title: "Certification",
