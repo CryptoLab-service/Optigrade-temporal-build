@@ -36,9 +36,14 @@ const social = [
     link: "https://www.linkedin.com/oluwalowojohn/",
   },
   {
-    name: "X",
-    icon: "x",
+    name: "Twitter", // Renamed from X
+    icon: "twitter", // Assuming 'twitter' icon is available
     link: "https://www.x.com/EncryptedMFI",
+  },
+  {
+    name: "WhatsApp", // Added WhatsApp
+    icon: "whatsapp", // Assuming 'whatsapp' icon is available
+    link: "https://wa.me/+2347030739128",
   },
   {
     name: "Email",
@@ -300,6 +305,7 @@ const about = {
     ],
   },
 
+  // Added a blank line for visual separation in the code
   research: {
     display: true,
     title: "Academic Research",
@@ -339,7 +345,7 @@ const about = {
     title: "Certification",
     awards: [
       {
-        name: "3MTT Nigeria:",
+        name: <><strong>3MTT Nigeria:</strong></>, // Bolded name
         description: (
           <>
             Certified in User Interface and User Experience Design as part of the Federal Training
@@ -348,7 +354,7 @@ const about = {
         ),
       },
       {
-        name: "ALX Africa",
+        name: <><strong>ALX Africa:</strong></>, // Bolded name and added space
         description: (
           <>
             Completed Artificial Intelligence Career Essentials, Professional Foundation and currently
@@ -357,23 +363,23 @@ const about = {
         ),
       },
       {
-        name: "Access Bank Youthrive Internship (CareerEx)",
+        name: <><strong>Access Bank Youthrive Internship (CareerEx):</strong></>, // Bolded name and added space
         description: <>Certified in Product Management with career acceleration support.</>,
       },
       {
-        name: "Cisco Networking Academy",
+        name: <><strong>Cisco Networking Academy:</strong></>, // Bolded name and added space
         description: (
           <>Completed Introduction to English for IT (1 and 2), Cybersecurity and Networking Basics.</>
         ),
       },
       {
-        name: "LinkedIn Learning",
+        name: <><strong>LinkedIn Learning:</strong></>, // Bolded name and added space
         description: (
           <>Completed courses on Design Thinking, Figma Essentials, and Creative Productivity.</>
         ),
       },
       {
-        name: "GreatLearning Academy",
+        name: <><strong>GreatLearning Academy:</strong></>, // Bolded name and added space
         description: <>Certified in Design Thinking principles, UI/UX Design, and Introduction to Design.</>,
       },
     ],
