@@ -330,6 +330,111 @@ const structure = [
               </Column>
             </>
           )}
+
+          {about.research.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.research.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.research.title}
+              </Heading>
+              <Column fillWidth gap="m" marginBottom="40">
+                <Text variant="body-default-m">{about.research.description}</Text>
+                <Flex fillWidth paddingTop="m" gap="12" wrap>
+                  {about.research.images.map((image, index) => (
+                    <Flex
+                      key={index}
+                      border="neutral-medium"
+                      radius="m"
+                      //@ts-ignore
+                      minWidth={image.width}
+                      //@ts-ignore
+                      height={image.height}
+                    >
+                      <Media
+                        enlarge
+                        radius="m"
+                        //@ts-ignore
+                        sizes={image.width.toString()}
+                        //@ts-ignore
+                        alt={image.alt}
+                        //@ts-ignore
+                        src={image.src}
+                      />
+                    </Flex>
+                  ))}
+                </Flex>
+              </Column>
+            </>
+          )}
+
+          {about.impact.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.impact.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.impact.title}
+              </Heading>
+              <Column fillWidth gap="m" marginBottom="40">
+                <Text variant="body-default-m">{about.impact.description}</Text>
+                <Flex fillWidth paddingTop="m" gap="12" wrap>
+                  {about.impact.images.map((image, index) => (
+                    <Flex
+                      key={index}
+                      border="neutral-medium"
+                      radius="m"
+                      //@ts-ignore
+                      minWidth={image.width}
+                      //@ts-ignore
+                      height={image.height}
+                    >
+                      <Media
+                        enlarge
+                        radius="m"
+                        //@ts-ignore
+                        sizes={image.width.toString()}
+                        //@ts-ignore
+                        alt={image.alt}
+                        //@ts-ignore
+                        src={image.src}
+                      />
+                    </Flex>
+                  ))}
+                </Flex>
+              </Column>
+            </>
+          )}
+
+          {about.certification.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.certification.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.certification.title}
+              </Heading>
+              <Column fillWidth gap="m" marginBottom="40">
+                <ul className="space-y-4">
+                  {about.certification.awards.map((award, index) => (
+                    <li key={`${award.name}-${index}`}>
+                      <Text variant="heading-strong-l">{award.name}</Text>
+                      <Text variant="body-default-m" onBackground="neutral-weak">
+                        {award.description}
+                      </Text>
+                    </li>
+                  ))}
+                </ul>
+              </Column>
+            </>
+          )}
         </Column>
       </Flex>
     </Column>
