@@ -53,19 +53,19 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building thoughtful products & solutions where design, intelligence, and impact ignite</>,
+  headline: <>Where design, intelligence, and impact ignite</>,
   featured: {
     display: true,
     title: <>My Ongoing Project: <strong className="ml-4">OPTIGRADE</strong></>,
     href: "/work/optigrade-academic-intelligence",
   },
   subline: (
-    <>
+    <p style={{ fontSize: '1rem', color: '#4B5563' }}>
       I'm Toluwalope John — designer, creative technologist, and founder of Zoe Tech Hub. I prototype
       ideas into purposeful digital tools across education and health, like Optigrade for academic
       analytics, TasxBox for simplified daily task workflows, and NoteHub for collaborative
       documentation. I believe in intuitive design and agile engineering for real-world change.
-    </>
+    </p>
   ),
 };
 
