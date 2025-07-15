@@ -345,7 +345,7 @@ const about = {
     title: "Certification",
     awards: [
       {
-        name: <><strong>3MTT Nigeria:</strong></>, // Bolded name
+        name: "3MTT Nigeria:", // Reverted to string
         description: (
           <>
             Certified in User Interface and User Experience Design as part of the Federal Training
@@ -354,7 +354,7 @@ const about = {
         ),
       },
       {
-        name: <><strong>ALX Africa:</strong></>, // Bolded name and added space
+        name: "ALX Africa:", // Reverted to string
         description: (
           <>
             Completed Artificial Intelligence Career Essentials, Professional Foundation and currently
@@ -363,23 +363,23 @@ const about = {
         ),
       },
       {
-        name: <><strong>Access Bank Youthrive Internship (CareerEx):</strong></>, // Bolded name and added space
+        name: "Access Bank Youthrive Internship (CareerEx):", // Reverted to string
         description: <>Certified in Product Management with career acceleration support.</>,
       },
       {
-        name: <><strong>Cisco Networking Academy:</strong></>, // Bolded name and added space
+        name: "Cisco Networking Academy:", // Reverted to string
         description: (
           <>Completed Introduction to English for IT (1 and 2), Cybersecurity and Networking Basics.</>
         ),
       },
       {
-        name: <><strong>LinkedIn Learning:</strong></>, // Bolded name and added space
+        name: "LinkedIn Learning:", // Reverted to string
         description: (
           <>Completed courses on Design Thinking, Figma Essentials, and Creative Productivity.</>
         ),
       },
       {
-        name: <><strong>GreatLearning Academy:</strong></>, // Bolded name and added space
+        name: "GreatLearning Academy:", // Reverted to string
         description: <>Certified in Design Thinking principles, UI/UX Design, and Introduction to Design.</>,
       },
     ],
