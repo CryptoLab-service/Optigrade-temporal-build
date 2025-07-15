@@ -37,7 +37,7 @@ const social = [
   },
   {
     name: "Twitter", // Renamed from X
-    icon: "twitter", // Assuming 'twitter' icon is available
+    icon: "x", // Assuming 'twitter' icon is available
     link: "https://www.x.com/EncryptedMFI",
   },
   {
