@@ -1,4 +1,5 @@
 import { Logo } from "@once-ui-system/core";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const person = {
   firstName: "Tolulope",
