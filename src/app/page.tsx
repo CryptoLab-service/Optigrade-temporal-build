@@ -65,7 +65,7 @@ export default function Home() {
                 arrowIcon
               >
                 <Flex gap="8" vertical="center">
-                  Let's Connect
+                  Let&apos;s Connect
                 </Flex>
               </Button>
             </Flex>
