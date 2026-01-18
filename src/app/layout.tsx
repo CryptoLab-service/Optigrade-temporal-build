@@ -3,6 +3,7 @@ import '@once-ui-system/core/css/tokens.css';
 import '@/resources/custom.css'
 
 import classNames from "classnames";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Background, Column, Flex, Meta, opacity, SpacingToken } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers, ScrollProgress, BackToTop } from '@/components';
@@ -156,6 +157,7 @@ export default async function RootLayout({
           </Flex>
           <Footer />
           <BackToTop />
+          <SpeedInsights />
         </Column>
       </Providers>
     </Flex>
