@@ -10,3 +10,6 @@ export { ThemeToggle } from "@/components/ThemeToggle";
 export { CustomMDX } from "@/components/mdx";
 export { TechStack } from "@/components/TechStack";
 export { GalleryPreview } from "@/components/GalleryPreview";
+export { ScrollProgress } from "@/components/ScrollProgress";
+export { BackToTop } from "@/components/BackToTop";
+export { DynamicHeadline } from "@/components/DynamicHeadline";

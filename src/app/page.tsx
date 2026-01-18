@@ -2,7 +2,7 @@ import React from "react";
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema, SmartLink } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes, gallery } from "@/resources";
-import { Mailchimp, TechStack, GalleryPreview } from "@/components";
+import { Mailchimp, TechStack, GalleryPreview, DynamicHeadline } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
@@ -33,9 +33,7 @@ export default function Home() {
             </RevealFx>
           )}
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
+            <DynamicHeadline text={home.headline} />
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
