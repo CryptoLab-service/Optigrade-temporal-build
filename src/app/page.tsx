@@ -41,7 +41,7 @@ export default function Home() {
             </Text>
           </RevealFx>
           <RevealFx paddingTop="12" delay={0.4} horizontal="start" paddingLeft="12">
-            <Flex gap="16" vertical="center" wrap="wrap">
+            <Flex gap="16" vertical="center" wrap>
               <Button
                 id="resume"
                 data-border="rounded"
