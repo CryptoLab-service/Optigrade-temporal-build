@@ -66,7 +66,7 @@ const home = {
   },
   subline: (
     <p style={{ fontSize: '1.125rem' }}>
-      I'm Toluwalope John — designer, creative technologist, and founder of Zoe Tech Hub. I prototype
+      I&apos;m Toluwalope John — designer, creative technologist, and founder of Zoe Tech Hub. I prototype
       ideas into purposeful digital tools across education and health, like Optigrade for academic
       analytics, TasxBox for simplified daily task workflows, and NoteHub for collaborative
       documentation. I believe in intuitive design and agile engineering for real-world change.
@@ -98,7 +98,7 @@ const about = {
         Toluwalope John is a UI/UX and graphics designer, entry-level data scientist, and budding
         software developer and AI agent. With a passion for creating purposeful visuals and seamless
         user experiences, he bridges design and technology to craft solutions that feel intuitive and
-        impactful. He's currently channeling that energy into Optigrade—a platform he's developing to
+        impactful. He&apos;s currently channeling that energy into Optigrade—a platform he&apos;s developing to
         rethink and enhance academic performance in Nigerian higher institutions.
       </>
     ),

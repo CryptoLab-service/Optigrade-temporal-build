@@ -4,7 +4,12 @@
 
 ## 🚀 Overview
 
-Welcome to my digital garden! Does a handshake still count if it's digital? This portfolio is a curated showcase of my journey as a **Designer, Analyst, Automation Specialist, AI-Software Developer, and Creative Technologist**. It reflects my passion for crafting intuitive user experiences, building data-driven solutions, and bridging the gap between design and engineering.
+Welcome to my digital garden! Does a handshake still count if it's digital? This portfolio is a curated showcase of my journey as a **Designer, Analyst, Automation Specialist, AI-Software Developer, and Creative Technologist**.
+
+It reflects my passion for:
+- Crafting intuitive user experiences
+- Building data-driven solutions
+- Bridging the gap between design and engineering
 
 Built with **Next.js** and the **Once UI** design system, this site is designed to be fast, accessible, and visually engaging.
 
@@ -19,21 +24,16 @@ I believe that true innovation lies at the intersection of **human-centric desig
 
 ## 🛠️ What I Do
 
-### **1. Product Design (UI/UX)**
-Transforming complex ideas into intuitive, beautiful interfaces. I specialize in design systems, prototyping, and user research.
-
-### **2. Frontend Development**
-Bringing designs to life with clean, semantic code. Expert in React, Next.js, and modern CSS frameworks.
-
-### **3. Data & AI Integrations**
-Leveraging data science and machine learning to add intelligence to applications. From predictive analytics to AI agents.
-
-### **4. Automation & Workflows**
-Optimizing processes to save time and reduce errors. Building smart pipelines for businesses and individuals.
+| Area | Description |
+|------|-------------|
+| **Product Design (UI/UX)** | Transforming complex ideas into intuitive, beautiful interfaces. Specializing in design systems, prototyping, and user research. |
+| **Frontend Development** | Bringing designs to life with clean, semantic code. Expert in React, Next.js, and modern CSS frameworks. |
+| **Data & AI Integrations** | Leveraging data science and machine learning to add intelligence to applications. From predictive analytics to AI agents. |
+| **Automation & Workflows** | Optimizing processes to save time and reduce errors. Building smart pipelines for businesses and individuals. |
 
 ---
 
-## ✨ Key Features of This Portfolio
+## ✨ Key Features
 
 - **Dynamic Project Showcase**: Browse my latest work, including **Optigrade**, **Zoe Tech Hub**, and more.
 - **Tech Stack Ticker**: A live, animated view of the tools and technologies I use daily.
@@ -43,7 +43,7 @@ Optimizing processes to save time and reduce errors. Building smart pipelines fo
 
 ---
 
-## � Tech Stack
+## 💻 Tech Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 - **Styling**: [Once UI](https://once-ui.com/) + SCSS Modules
@@ -55,33 +55,10 @@ Optimizing processes to save time and reduce errors. Building smart pipelines fo
 ## 📸 Gallery
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <img src="public/images/gallery/horizontal-1.jpg" alt="Gallery Image 1" width="300" />
-  <img src="public/images/gallery/horizontal-2.jpg" alt="Gallery Image 2" width="300" />
-  <img src="public/images/gallery/vertical-1.jpg" alt="Gallery Image 3" height="200" />
+  <img src="public/images/gallery/horizontal-1.jpg" alt="Gallery Image 1" style="height: 200px; object-fit: cover;" />
+  <img src="public/images/gallery/horizontal-2.jpg" alt="Gallery Image 2" style="height: 200px; object-fit: cover;" />
+  <img src="public/images/gallery/vertical-1.jpg" alt="Gallery Image 3" style="height: 200px; object-fit: cover;" />
 </div>
-
----
-
-## 🏃‍♂️ Running Locally
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/CryptoLab-service/Optigrade-temporal-build.git
-    cd Optigrade-temporal-build
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Open in Browser:**
-    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -89,10 +66,8 @@ Optimizing processes to save time and reduce errors. Building smart pipelines fo
 
 - **Email**: [oluwalowojohn@gmail.com](mailto:oluwalowojohn@gmail.com)
 - **LinkedIn**: [Oluwalowo John](https://www.linkedin.com/oluwalowojohn/)
-- **Facebook**: [Oluwalowo John](https://www.facebook.com/oluwalowojohn/)
-- **Instagram**: [Oluwalowo John](https://www.instagram.com/oluwalowojohn/)
-- **GitHub**: [CryptoLab-service](https://github.com/cryptoLab-service)
 - **X**: [@EncryptedMFI](https://twitter.com/EncryptedMFI)
+- **GitHub**: [CryptoLab-service](https://github.com/CryptoLab-service)
 
 ---
 
