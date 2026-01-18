@@ -41,40 +41,31 @@ export default function Home() {
             </Text>
           </RevealFx>
           <RevealFx paddingTop="12" delay={0.4} horizontal="start" paddingLeft="12">
-            <Flex gap="16" vertical="center">
+            <Flex gap="16" vertical="center" wrap="wrap">
               <Button
-                id="about"
+                id="resume"
                 data-border="rounded"
-                href={about.path}
+                href="/resume.pdf" // Ensure this file exists or update link
+                variant="primary"
+                size="m"
+                weight="default"
+                arrowIcon
+              >
+                <Flex gap="8" vertical="center">
+                  Download Resume
+                </Flex>
+              </Button>
+              <Button
+                id="contact"
+                data-border="rounded"
+                href={`mailto:${person.email}`}
                 variant="secondary"
                 size="m"
                 weight="default"
                 arrowIcon
               >
-                <Flex gap="8" vertical="center" paddingRight="4">
-                  {about.avatar.display && (
-                    <div style={{ position: 'relative' }}>
-                      <Avatar
-                        marginRight="8"
-                        style={{ marginLeft: "-0.75rem" }}
-                        src={person.avatar}
-                        size="m"
-                      />
-                      {/* Status Indicator */}
-                      <div style={{
-                        position: 'absolute',
-                        bottom: '0',
-                        right: '8px',
-                        width: '10px',
-                        height: '10px',
-                        backgroundColor: '#2ecc71',
-                        borderRadius: '50%',
-                        border: '2px solid var(--background)',
-                        boxShadow: '0 0 0 2px var(--background)'
-                      }} />
-                    </div>
-                  )}
-                  {about.title}
+                <Flex gap="8" vertical="center">
+                  Let's Connect
                 </Flex>
               </Button>
             </Flex>
@@ -109,6 +100,27 @@ export default function Home() {
         <GalleryPreview images={gallery.images} />
       </RevealFx>
 
+      <Flex
+        fillWidth
+        paddingX="l"
+        paddingY="xl"
+        gap="m"
+        vertical="center"
+        horizontal="center"
+        mobileDirection="column"
+      >
+        <Heading variant="display-strong-s">
+          Ready to start a project?
+        </Heading>
+        <Button
+          href={`mailto:${person.email}`}
+          variant="primary"
+          size="l"
+          arrowIcon
+        >
+          Get in touch
+        </Button>
+      </Flex>
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );

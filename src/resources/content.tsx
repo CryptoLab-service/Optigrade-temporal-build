@@ -1,7 +1,7 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Tolulope",
+  firstName: "Toluwalope",
   lastName: "John",
   get name() {
     return `${this.firstName} ${this.lastName}`;
@@ -180,6 +180,10 @@ const about = {
         name: "The 3 Million Technical Talent",
         description: <>Studied User Interface and User Experience Design.</>,
       },
+      {
+        name: "DeepTech Learning",
+        description: <>Studied Data Science.</>,
+      },
     ],
   },
   technical: {
@@ -201,12 +205,6 @@ const about = {
             width: 12,
             height: 6.75,
           },
-          {
-            src: "/tools/figma1.jpg",
-            alt: "XD components",
-            width: 12,
-            height: 6.75,
-          },
         ],
       },
       {
@@ -222,12 +220,6 @@ const about = {
           {
             src: "/tools/xd.jpg",
             alt: "Figma UI Design",
-            width: 12,
-            height: 6.75,
-          },
-          {
-            src: "/tools/xd1.jpg",
-            alt: "XD components",
             width: 12,
             height: 6.75,
           },
@@ -248,12 +240,6 @@ const about = {
             width: 12,
             height: 6.75,
           },
-          {
-            src: "/tools/ps1.jpg",
-            alt: "XD components",
-            width: 12,
-            height: 6.75,
-          },
         ],
       },
       {
@@ -271,12 +257,6 @@ const about = {
             width: 12,
             height: 6.75,
           },
-          {
-            src: "/tools/notion1.jpg",
-            alt: "XD components",
-            width: 12,
-            height: 6.75,
-          },
         ],
       },
       {
@@ -291,12 +271,6 @@ const about = {
           {
             src: "/tools/jupy.jpg",
             alt: "Figma UI Design",
-            width: 12,
-            height: 6.75,
-          },
-          {
-            src: "/tools/jupy1.jpg",
-            alt: "XD components",
             width: 12,
             height: 6.75,
           },
@@ -363,24 +337,10 @@ const about = {
         ),
       },
       {
-        name: "Access Bank Youthrive Internship (CareerEx):", // Reverted to string
-        description: <>Certified in Product Management with career acceleration support.</>,
-      },
-      {
         name: "Cisco Networking Academy:", // Reverted to string
         description: (
           <>Completed Introduction to English for IT (1 and 2), Cybersecurity and Networking Basics.</>
         ),
-      },
-      {
-        name: "LinkedIn Learning:", // Reverted to string
-        description: (
-          <>Completed courses on Design Thinking, Figma Essentials, and Creative Productivity.</>
-        ),
-      },
-      {
-        name: "GreatLearning Academy:", // Reverted to string
-        description: <>Certified in Design Thinking principles, UI/UX Design, and Introduction to Design.</>,
       },
     ],
   },
