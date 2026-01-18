@@ -1,7 +1,7 @@
 "use client";
 
 import Masonry from "react-masonry-css";
-import { Media } from "@once-ui-system/core";
+import { Media, RevealFx } from "@once-ui-system/core";
 import styles from "./Gallery.module.scss";
 import { gallery } from "@/resources";
 
@@ -18,16 +18,18 @@ export default function MasonryGrid() {
       columnClassName={styles.masonryGridColumn}
     >
       {gallery.images.map((image, index) => (
-        <Media
-          priority={index < 10}
-          sizes="(max-width: 560px) 100vw, 50vw"
-          key={index}
-          radius="m"
-          aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "3 / 4"}
-          src={image.src}
-          alt={image.alt}
-          className={styles.gridItem}
-        />
+        <RevealFx key={index} delay={index * 0.05} translateY="16">
+          <Media
+            priority={index < 10}
+            sizes="(max-width: 560px) 100vw, 50vw"
+            radius="m"
+            aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "3 / 4"}
+            src={image.src}
+            alt={image.alt}
+            className={styles.gridItem}
+            enlarge
+          />
+        </RevealFx>
       ))}
     </Masonry>
   );

@@ -105,7 +105,9 @@ export default function Home() {
       <Projects range={[2]} />
 
       {/* Gallery Preview */}
-      <GalleryPreview images={gallery.images} />
+      <RevealFx translateY="16" delay={0.6}>
+        <GalleryPreview images={gallery.images} />
+      </RevealFx>
 
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>

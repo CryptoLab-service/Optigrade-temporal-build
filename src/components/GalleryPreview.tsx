@@ -1,7 +1,9 @@
 "use client";
 
-import { Flex, Heading, Grid, Button, Column } from "@once-ui-system/core";
+import { Flex, Heading, Button, Column } from "@once-ui-system/core";
 import Link from "next/link";
+import styles from "./GalleryPreview.module.scss";
+import Image from "next/image";
 
 interface GalleryPreviewProps {
     images: {
@@ -12,8 +14,9 @@ interface GalleryPreviewProps {
 }
 
 export const GalleryPreview = ({ images }: GalleryPreviewProps) => {
-    // Take first 3-4 images
-    const previewImages = images.slice(0, 4);
+    // Duplicate images for infinite scroll
+    const galleryImages = images.slice(0, 6); // Take more images for a better scroll
+    const items = [...galleryImages, ...galleryImages];
 
     return (
         <Column fillWidth gap="l" paddingY="32" horizontal="center">
@@ -24,17 +27,29 @@ export const GalleryPreview = ({ images }: GalleryPreviewProps) => {
                 </Button>
             </Flex>
 
-            <Flex fillWidth wrap gap="m" paddingX="l" horizontal="center">
-                {previewImages.map((img, index) => (
-                    <div key={index} style={{ position: 'relative', width: 'calc(50% - var(--static-space-m))', aspectRatio: '16/9', borderRadius: 'var(--radius-m)', overflow: 'hidden' }}>
-                        <img
-                            src={img.src}
-                            alt={img.alt}
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        />
-                    </div>
-                ))}
-            </Flex>
+            <div className={styles.scroller}>
+                <div className={styles.inner}>
+                    {items.map((img, index) => (
+                        <div
+                            key={`${index}-${img.src}`}
+                            className={styles.item}
+                            style={{
+                                width: img.orientation === 'vertical' ? '300px' : '400px',
+                                aspectRatio: img.orientation === 'vertical' ? '9/16' : '16/9',
+                                flexShrink: 0
+                            }}
+                        >
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                fill
+                                sizes={img.orientation === 'vertical' ? '300px' : '400px'}
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
         </Column>
     );
 };

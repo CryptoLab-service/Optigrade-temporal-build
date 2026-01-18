@@ -11,4 +11,11 @@
 
 .gridItem {
     margin-bottom: var(--static-space-16);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+        filter: brightness(1.05);
+    }
 }

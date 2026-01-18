@@ -2,6 +2,7 @@
 
 import { Flex, Text } from "@once-ui-system/core";
 import styles from "./TechStack.module.scss";
+import Image from "next/image";
 
 interface TechStackProps {
     skills: {
@@ -22,13 +23,17 @@ export const TechStack = ({ skills }: TechStackProps) => {
                     <div key={`${skill.title}-${index}`} className={styles.item}>
                         {/* Use standard img for icon if available */}
                         {skill.images && skill.images[0] && (
-                            <img
-                                src={skill.images[0].src}
-                                alt={skill.images[0].alt}
-                                style={{ width: '24px', height: '24px', objectFit: 'contain' }}
-                            />
+                            <div style={{ position: 'relative', width: '40px', height: '40px' }}>
+                                <Image
+                                    src={skill.images[0].src}
+                                    alt={skill.images[0].alt}
+                                    fill
+                                    className={styles.icon}
+                                    style={{ objectFit: 'contain' }}
+                                />
+                            </div>
                         )}
-                        <Text variant="body-default-l" onBackground="neutral-weak">
+                        <Text variant="heading-strong-m" onBackground="neutral-weak">
                             {skill.title}
                         </Text>
                     </div>

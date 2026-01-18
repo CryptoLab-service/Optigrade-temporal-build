@@ -1,0 +1,9 @@
+.card {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-4px);
+        filter: brightness(1.02);
+    }
+}

@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, RevealFx } from "@once-ui-system/core";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person, newsletter } from "@/resources";
@@ -33,11 +33,17 @@ export default function Blog() {
         {blog.title}
       </Heading>
       <Column
-				fillWidth flex={1}>
-				<Posts range={[1,1]} thumbnail direction="column"/>
-				<Posts range={[2,3]} thumbnail/>
-				<Posts range={[4]} columns="2"/>
-			</Column>
+        fillWidth flex={1}>
+        <RevealFx translateY="16">
+          <Posts range={[1, 1]} thumbnail direction="column" />
+        </RevealFx>
+        <RevealFx translateY="16" delay={0.1}>
+          <Posts range={[2, 3]} thumbnail />
+        </RevealFx>
+        <RevealFx translateY="16" delay={0.2}>
+          <Posts range={[4]} columns="2" />
+        </RevealFx>
+      </Column>
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );

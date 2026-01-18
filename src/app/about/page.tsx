@@ -10,7 +10,8 @@ import {
   Tag,
   Text,
   Meta,
-  Schema
+  Schema,
+  RevealFx
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -28,43 +29,29 @@ export async function generateMetadata() {
 }
 
 export default function About() {
-const structure = [
-  {
-    title: about.intro.title,
-    display: about.intro.display,
-    items: [],
-  },
-  {
-    title: about.work.title,
-    display: about.work.display,
-    items: about.work.experiences.map((experience) => experience.company),
-  },
-  {
-    title: about.studies.title,
-    display: about.studies.display,
-    items: about.studies.institutions.map((institution) => institution.name),
-  },
-  {
-    title: about.technical.title,
-    display: about.technical.display,
-    items: about.technical.skills.map((skill) => skill.title),
-  },
-  {
-    title: about.research.title,
-    display: about.research.display,
-    items: [], // You can add mapped items if needed
-  },
-  {
-    title: about.impact.title,
-    display: about.impact.display,
-    items: [], // You can add mapped items if needed
-  },
-  {
-    title: about.certification.title,
-    display: about.certification.display,
-    items: about.certification.awards.map((award) => award.name),
-  },
-];
+  const structure = [
+    {
+      title: about.intro.title,
+      display: about.intro.display,
+      items: [],
+    },
+    {
+      title: about.work.title,
+      display: about.work.display,
+      items: about.work.experiences.map((experience) => experience.company),
+    },
+    {
+      title: about.studies.title,
+      display: about.studies.display,
+      items: about.studies.institutions.map((institution) => institution.name),
+    },
+    {
+      title: about.technical.title,
+      display: about.technical.display,
+      items: about.technical.skills.map((skill) => skill.title),
+    },
+  ];
+
   return (
     <Column maxWidth="m">
       <Schema
@@ -80,6 +67,8 @@ const structure = [
           image: `${baseURL}${person.avatar}`,
         }}
       />
+
+      {/* Removed fixed TableOfContents for cleaner mobile/desktop feel or keep if preferred. keeping it for now but hiding on small */}
       {about.tableOfContent.display && (
         <Column
           left="0"
@@ -92,6 +81,7 @@ const structure = [
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
+
       <Flex fillWidth mobileDirection="column" horizontal="center">
         {about.avatar.display && (
           <Column
@@ -120,321 +110,199 @@ const structure = [
             )}
           </Column>
         )}
+
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+          {/* Header Section */}
           <Column
-            id={about.intro.title}
             fillWidth
             minHeight="160"
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
-              <Flex
-                fitWidth
-                border="brand-alpha-medium"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
+            <RevealFx translateY="8">
+              <Heading className={styles.textAlign} variant="display-strong-xl">
+                {person.name}
+              </Heading>
+            </RevealFx>
+            <RevealFx translateY="8" delay={0.1}>
+              <Text
+                className={styles.textAlign}
+                variant="display-default-xs"
+                onBackground="neutral-weak"
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Flex paddingX="8">Schedule a call</Flex>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Flex>
-            )}
-            <Heading className={styles.textAlign} variant="display-strong-xl">
-              {person.name}
-            </Heading>
-            <Text
-              className={styles.textAlign}
-              variant="display-default-xs"
-              onBackground="neutral-weak"
-            >
-              {person.role}
-            </Text>
+                {person.role}
+              </Text>
+            </RevealFx>
+
             {social.length > 0 && (
-              <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth data-border="rounded">
-                {social.map(
-                  (item) =>
-                    item.link && (
-                        <React.Fragment key={item.name}>
-                            <Button
-                                className="s-flex-hide"
-                                key={item.name}
-                                href={item.link}
-                                prefixIcon={item.icon}
-                                label={item.name}
-                                size="s"
-                                weight="default"
-                                variant="secondary"
-                            />
-                            <IconButton
-                                className="s-flex-show"
-                                size="l"
-                                key={`${item.name}-icon`}
-                                href={item.link}
-                                icon={item.icon}
-                                variant="secondary"
-                            />
-                        </React.Fragment>
-                    ),
-                )}
-              </Flex>
+              <RevealFx translateY="8" delay={0.2}>
+                <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
+                  {social.map((item) => item.link && (
+                    <IconButton
+                      key={item.name}
+                      href={item.link}
+                      icon={item.icon}
+                      variant="secondary"
+                      size="l"
+                      tooltip={item.name}
+                    />
+                  ))}
+                </Flex>
+              </RevealFx>
             )}
           </Column>
 
+          {/* Intro - Simplified */}
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
-              {about.intro.description}
+            <RevealFx translateY="12" delay={0.3}>
+              <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+                {about.intro.description}
+              </Column>
+            </RevealFx>
+          )}
+
+          {/* Work Experience - Enhanced Visuals */}
+          {about.work.display && (
+            <>
+              <RevealFx translateY="12" delay={0.4}>
+                <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+                  {about.work.title}
+                </Heading>
+              </RevealFx>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.work.experiences.map((experience, index) => (
+                  <RevealFx key={`${experience.company}-${index}`} translateY="8" delay={0.5 + index * 0.1}>
+                    <Column fillWidth border="neutral-alpha-medium" padding="l" radius="l" background="neutral-alpha-weak">
+                      <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                        <Text id={experience.company} variant="heading-strong-l">
+                          {experience.company}
+                        </Text>
+                        <Text variant="heading-default-xs" onBackground="neutral-weak">
+                          {experience.timeframe}
+                        </Text>
+                      </Flex>
+                      <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+                        {experience.role}
+                      </Text>
+                      <Column as="ul" gap="8" paddingLeft="16" style={{ listStyleType: 'disc' }}>
+                        {experience.achievements.map((achievement: JSX.Element, i: number) => (
+                          <li key={i}>
+                            <Text variant="body-default-m">
+                              {achievement}
+                            </Text>
+                          </li>
+                        ))}
+                      </Column>
+                    </Column>
+                  </RevealFx>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {/* Studies & Certifications - Grid Layout */}
+          <Flex fillWidth gap="24" mobileDirection="column" marginBottom="40">
+            {about.studies.display && (
+              <Column flex={1} gap="m">
+                <RevealFx translateY="12" delay={0.6}>
+                  <Heading as="h2" id={about.studies.title} variant="display-strong-s">
+                    {about.studies.title}
+                  </Heading>
+                </RevealFx>
+                {about.studies.institutions.map((institution, index) => (
+                  <RevealFx key={index} translateY="4" delay={0.7}>
+                    <Column fillWidth border="neutral-alpha-medium" padding="m" radius="m">
+                      <Text variant="heading-strong-m">{institution.name}</Text>
+                      <Text variant="body-default-m" onBackground="neutral-weak">{institution.description}</Text>
+                    </Column>
+                  </RevealFx>
+                ))}
+              </Column>
+            )}
+
+            {about.certification.display && (
+              <Column flex={1} gap="m">
+                <RevealFx translateY="12" delay={0.6}>
+                  <Heading as="h2" id={about.certification.title} variant="display-strong-s">
+                    {about.certification.title}
+                  </Heading>
+                </RevealFx>
+                {about.certification.awards.map((award, index) => (
+                  <RevealFx key={index} translateY="4" delay={0.7 + index * 0.05}>
+                    <Column fillWidth border="neutral-alpha-medium" padding="m" radius="m">
+                      <Text variant="heading-strong-m">{award.name}</Text>
+                      <Text variant="body-default-s" onBackground="neutral-weak">{award.description}</Text>
+                    </Column>
+                  </RevealFx>
+                ))}
+              </Column>
+            )}
+          </Flex>
+
+          {/* Technical Skills - Masonry/Grid feel */}
+          {about.technical.display && (
+            <>
+              <RevealFx translateY="12">
+                <Heading as="h2" id={about.technical.title} variant="display-strong-s" marginBottom="m">
+                  {about.technical.title}
+                </Heading>
+              </RevealFx>
+              <Column fillWidth gap="m" marginBottom="40">
+                {about.technical.skills.map((skill, index) => (
+                  <RevealFx key={index} translateY="8" delay={0.1}>
+                    <Column fillWidth border="neutral-alpha-medium" padding="l" radius="l">
+                      <Flex gap="16" vertical="center" marginBottom="8">
+                        {/* If we had icons here it would be great, using title for now */}
+                        <Text variant="heading-strong-l">{skill.title}</Text>
+                      </Flex>
+                      <Text variant="body-default-m" onBackground="neutral-weak">
+                        {skill.description}
+                      </Text>
+                      {skill.images && skill.images.length > 0 && (
+                        <Flex gap="16" marginTop="16" wrap>
+                          {skill.images.map((img, i) => (
+                            <Flex key={i} border="neutral-medium" radius="m" padding="4" background="neutral-strong">
+                              {/* Using smaller icons for cleaner look */}
+                              <Media
+                                src={img.src}
+                                width={32}
+                                height={32}
+                                alt={img.alt}
+                              />
+                            </Flex>
+                          ))}
+                        </Flex>
+                      )}
+                    </Column>
+                  </RevealFx>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {/* Consolidated Impact/Research Section */}
+          {(about.research.display || about.impact.display) && (
+            <Column fillWidth gap="xl" marginBottom="xl">
+              <RevealFx translateY="12">
+                <Heading as="h2" variant="display-strong-s">Focus Areas</Heading>
+              </RevealFx>
+              <Flex gap="24" mobileDirection="column">
+                {about.research.display && (
+                  <Column flex={1} gap="m" border="neutral-alpha-medium" padding="l" radius="l">
+                    <Text variant="heading-strong-m">{about.research.title}</Text>
+                    <Text variant="body-default-m">{about.research.description}</Text>
+                  </Column>
+                )}
+                {about.impact.display && (
+                  <Column flex={1} gap="m" border="neutral-alpha-medium" padding="l" radius="l">
+                    <Text variant="heading-strong-m">{about.impact.title}</Text>
+                    <Text variant="body-default-m">{about.impact.description}</Text>
+                  </Column>
+                )}
+              </Flex>
             </Column>
           )}
 
-          {about.work.display && (
-            <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
-                {about.work.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {experience.timeframe}
-                      </Text>
-                    </Flex>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
-                    </Text>
-                    <Column as="ul" gap="16">
-                      {experience.achievements.map((achievement: JSX.Element, index: number) => (
-                        <Text
-                          as="li"
-                          variant="body-default-m"
-                          key={`${experience.company}-${index}`}
-                        >
-                          {achievement}
-                        </Text>
-                      ))}
-                    </Column>
-                    {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.studies.display && (
-            <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.technical.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.technical.title}
-                variant="display-strong-s"
-                marginBottom="40"
-              >
-                {about.technical.title}
-              </Heading>
-              <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text id={skill.title} variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.research.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.research.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.research.title}
-              </Heading>
-              <Column fillWidth gap="m" marginBottom="40">
-                <Text variant="body-default-m">{about.research.description}</Text>
-                <Flex fillWidth paddingTop="m" gap="12" wrap>
-                  {about.research.images.map((image, index) => (
-                    <Flex
-                      key={index}
-                      border="neutral-medium"
-                      radius="m"
-                      //@ts-ignore
-                      minWidth={image.width}
-                      //@ts-ignore
-                      height={image.height}
-                    >
-                      <Media
-                        enlarge
-                        radius="m"
-                        //@ts-ignore
-                        sizes={image.width.toString()}
-                        //@ts-ignore
-                        alt={image.alt}
-                        //@ts-ignore
-                        src={image.src}
-                      />
-                    </Flex>
-                  ))}
-                </Flex>
-              </Column>
-            </>
-          )}
-
-          {about.impact.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.impact.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.impact.title}
-              </Heading>
-              <Column fillWidth gap="m" marginBottom="40">
-                <Text variant="body-default-m">{about.impact.description}</Text>
-                <Flex fillWidth paddingTop="m" gap="12" wrap>
-                  {about.impact.images.map((image, index) => (
-                    <Flex
-                      key={index}
-                      border="neutral-medium"
-                      radius="m"
-                      //@ts-ignore
-                      minWidth={image.width}
-                      //@ts-ignore
-                      height={image.height}
-                    >
-                      <Media
-                        enlarge
-                        radius="m"
-                        //@ts-ignore
-                        sizes={image.width.toString()}
-                        //@ts-ignore
-                        alt={image.alt}
-                        //@ts-ignore
-                        src={image.src}
-                      />
-                    </Flex>
-                  ))}
-                </Flex>
-              </Column>
-            </>
-          )}
-
-          {about.certification.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.certification.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.certification.title}
-              </Heading>
-              <Column fillWidth gap="m" marginBottom="40">
-                <ul className="space-y-4">
-                  {about.certification.awards.map((award, index) => (
-                    <li key={`${award.name}-${index}`}>
-                      <Text variant="heading-strong-l">{award.name}</Text>
-                      <Text variant="body-default-m" onBackground="neutral-weak">
-                        {award.description}
-                      </Text>
-                    </li>
-                  ))}
-                </ul>
-              </Column>
-            </>
-          )}
         </Column>
       </Flex>
     </Column>
