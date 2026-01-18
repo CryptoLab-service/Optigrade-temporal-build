@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema } from "@once-ui-system/core";
-import { home, about, person, newsletter, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema, SmartLink } from "@once-ui-system/core";
+import { home, about, person, newsletter, baseURL, routes, gallery } from "@/resources";
+import { Mailchimp, TechStack, GalleryPreview } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
@@ -25,12 +25,12 @@ export default function Home() {
       <Column fillWidth paddingY="24" gap="m">
         <Column maxWidth="s">
           {home.featured.display && (
-          <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
-            <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
-              href={home.featured.href}>
-              <Row paddingY="2">{home.featured.title}</Row>
-            </Badge>
-          </RevealFx>
+            <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
+              <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
+                href={home.featured.href}>
+                <Row paddingY="2">{home.featured.title}</Row>
+              </Badge>
+            </RevealFx>
           )}
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
@@ -43,30 +43,52 @@ export default function Home() {
             </Text>
           </RevealFx>
           <RevealFx paddingTop="12" delay={0.4} horizontal="start" paddingLeft="12">
-            <Button
-              id="about"
-              data-border="rounded"
-              href={about.path}
-              variant="secondary"
-              size="m"
-              weight="default"
-              arrowIcon
-            >
-              <Flex gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Flex>
-            </Button>
+            <Flex gap="16" vertical="center">
+              <Button
+                id="about"
+                data-border="rounded"
+                href={about.path}
+                variant="secondary"
+                size="m"
+                weight="default"
+                arrowIcon
+              >
+                <Flex gap="8" vertical="center" paddingRight="4">
+                  {about.avatar.display && (
+                    <div style={{ position: 'relative' }}>
+                      <Avatar
+                        marginRight="8"
+                        style={{ marginLeft: "-0.75rem" }}
+                        src={person.avatar}
+                        size="m"
+                      />
+                      {/* Status Indicator */}
+                      <div style={{
+                        position: 'absolute',
+                        bottom: '0',
+                        right: '8px',
+                        width: '10px',
+                        height: '10px',
+                        backgroundColor: '#2ecc71',
+                        borderRadius: '50%',
+                        border: '2px solid var(--background)',
+                        boxShadow: '0 0 0 2px var(--background)'
+                      }} />
+                    </div>
+                  )}
+                  {about.title}
+                </Flex>
+              </Button>
+            </Flex>
           </RevealFx>
         </Column>
       </Column>
+
+      {/* Tech Stack Ticker */}
+      <RevealFx translateY="16" delay={0.5}>
+        <TechStack skills={about.technical.skills} />
+      </RevealFx>
+
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
@@ -83,6 +105,10 @@ export default function Home() {
         </Flex>
       )}
       <Projects range={[2]} />
+
+      {/* Gallery Preview */}
+      <GalleryPreview images={gallery.images} />
+
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );

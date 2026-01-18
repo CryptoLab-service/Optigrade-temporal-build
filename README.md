@@ -1,57 +1,45 @@
-# **Optigrade — Academic Intelligence Engine**
+# Portfolio – Toluwalope John
 
-> Designed by **Oluwalowo John**  
-> Founder of Zoe Tech Hub | Creator of Optigrade, TaxBox & NoteHub  
-> Empowering smarter learning experiences across education & health
+![Portfolio Preview](https://zoetechhub.name.ng/og-image.jpg)
 
-![Optigrade Demo](https://www.zoetechhub.name.ng/public/images/og/home.jpg)
+## 🚀 Overview
 
----
+Welcome to my digital garden! Does a handshake still count if it's digital? This portfolio is a curated showcase of my journey as a **Designer, Analyst, Automation Specialist, AI-Software developer and Creative Technologist**. It reflects my passion for crafting intuitive user experiences, building data-driven solutions, and bridging the gap between design and engineering.
 
-## 🚀 Live Preview
-
-🌐 Visit my [Portfolio to view case study](https://www.zoetechhub.name.ng)
-
----
-
-## 🧠 What is Optigrade?
-
-Optigrade is a smart academic companion designed to help students thrive through **predictive forecasting**, **personalized guidance**, and **intelligent feedback**.
-
-It enhances study efficiency by analyzing each learner’s academic history, habits, and learning style — and generates custom CGPA projections, semester insights, and strategic performance goals.
-
-Optigrade is a predictive academic performance engine built to help students succeed with precision. It analyzes historical learning data, study patterns, and course loads to forecast GPA/CGPA outcomes and offer personalized insights. Through AI and machine learning, Optigrade transforms raw academic data into actionable feedback — supporting smarter study plans, real-time performance tracking, and strategic semester planning.
+Built with **Next.js** and the **Once UI** design system, this site is designed to be fast, accessible, and visually engaging.
 
 ## ✨ Features
 
-- 🎓 **GPA/CGPA Prediction Engine**  
-  Forecast academic outcomes based on personal learning history and study patterns.
+- **Dynamic Project Showcase**: Browse my latest work, including **Optigrade**, **Zoe Tech Hub**, and more.
+- **Tech Stack Ticker**: A live view of the tools and technologies I use daily (Figma, React, Python, etc.).
+- **Interactive Gallery**: A sneak peek into my visual world.
+- **Blog & Insights**: Thoughts on design, technology, and the future of ed-tech.
+- **Responsive Design**: optimized for every screen size.
 
-- 📈 **Performance Dashboard**  
-  Visualize progress, track grades, and receive intelligent recommendations.
+## 🛠️ Tech Stack
 
-- 🧠 **AI + ML Integration**  
-  Learns user behavior and course dynamics to increase prediction accuracy over time.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Once UI](https://once-ui.com/) + SCSS Modules
+- **Content**: MDX
+- **Deployment**: Vercel
 
-- 📚 **Study Guidance**  
-  Generates structured plans tailored to workload, hours studied, and academic goals.
+## 📸 Gallery
 
-- 🔒 **Modular Tools Architecture**  
-  Custom GPA calculators, certification cards, CV preview, and semester analyzers.
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="public/images/gallery/horizontal-1.jpg" alt="Gallery Image 1" width="300" />
+  <img src="public/images/gallery/horizontal-2.jpg" alt="Gallery Image 2" width="300" />
+  <img src="public/images/gallery/vertical-1.jpg" alt="Gallery Image 3" height="200" />
+</div>
+
+## 📫 Connect with Me
+
+- **Email**: [oluwalowojohn@gmail.com](mailto:oluwalowojohn@gmail.com)
+- **LinkedIn**: [Oluwalowo John](https://www.linkedin.com/oluwalowojohn/)
+- **Facebook**: [Oluwalowo John](https://www.facebook.com/oluwalowojohn/)
+- **Instagram**: [Oluwalowo John](https://www.instagram.com/oluwalowojohn/)
+- **GitHub**: [CryptoLab-service](https://github.com/cryptoLab-service)
+- **X**: [@EncryptedMFI](https://twitter.com/EncryptedMFI)
 
 ---
 
-## 🔄 Workflow Architecture
-
-```plaintext
-User Input (Grades, Courses, Study Goals)
-  ⇓
-Structured Data Mapping (Unit Load, Time Spent, Grade Weights)
-  ⇓
-Learning Pattern Profiling (Study Style, History)
-  ⇓
-AI/ML Model Inference (Personalized Prediction)
-  ⇓
-Forecast Engine (GPA/CGPA + Feedback)
-  ⇓
-Performance Dashboard + Recommendations
+> *"Where design, intelligence, and impact ignite."*
